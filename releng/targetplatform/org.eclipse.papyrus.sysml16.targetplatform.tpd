@@ -23,8 +23,12 @@ location "https://download.eclipse.org/modeling/mdt/papyrus/updates/releases/202
  org.eclipse.papyrus.toolsmiths.feature.feature.group lazy
 }
 
+//manual update
+location "https://download.eclipse.org/justj/jres/11/updates/release" JustJ-11 {
+	org.eclipse.justj.openjdk.hotspot.jre.full.feature.group lazy
+}
 
 //manual update
-location orbit "https://download.eclipse.org/tools/orbit/downloads/drops/R20211122181901/repository/" {
+location "https://download.eclipse.org/tools/orbit/downloads/drops/R20211122181901/repository/" orbit {
  org.apache.xerces [2.9.0, 2.10.0)
 }

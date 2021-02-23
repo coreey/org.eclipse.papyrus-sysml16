@@ -195,6 +195,7 @@
 								<arch>x86_64</arch>
 							</environment>
 						</environments>
+						<resolveWithExecutionEnvironmentConstraints>false</resolveWithExecutionEnvironmentConstraints>
 						<target>
 							<artifact>
 								<groupId>${target.groupId}</groupId>

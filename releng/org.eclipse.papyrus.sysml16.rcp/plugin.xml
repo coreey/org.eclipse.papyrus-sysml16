@@ -28,7 +28,7 @@
          <property name="aboutImage" value="icons/papyrus_lg.png"/>
          <property
                name="appName"
-               value="Papyrus">
+               value="Papyrus SysML 1.6">
          </property>
          <property
                name="introTitle"
