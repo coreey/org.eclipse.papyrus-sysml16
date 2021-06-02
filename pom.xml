@@ -26,11 +26,13 @@
 		<component.bugzilla.name>SysML</component.bugzilla.name>
 		<component.rcp.name>org.eclipse.papyrus.sysml16.rcp</component.rcp.name>
 		<component.servicetype>org.eclipse.papyrus.sysml16.service.types</component.servicetype>
-		<eclipse.targetrelease>2020-12</eclipse.targetrelease>
-		<target.version>${project.version}</target.version>
-		<target.groupId>${project.groupId}</target.groupId>
-		<target.artifactId>org.eclipse.papyrus.sysml16.targetplatform</target.artifactId>
 		<tycho.scmUrl>${project.scm.connection}</tycho.scmUrl>
+
+		<!-- platform specific properties -->
+		<eclipse.targetrelease>2021-03</eclipse.targetrelease>
+		<target.version>2.0.0-SNAPSHOT</target.version> 
+		<target.groupId>org.eclipse.papyrus.sysml</target.groupId>
+		<target.artifactId>org.eclipse.papyrus.sysml16.targetplatform</target.artifactId>
 
 		<tycho.version>2.0.0</tycho.version>
 		<tychoExtras.version>2.0.0</tychoExtras.version>
@@ -47,16 +49,6 @@
 		<java.source.version>11</java.source.version>
 		<java.target.version>11</java.target.version>
 	</properties>
-
-	<mailingLists>
-		<mailingList>
-			<name>Papyrus SysML users Mailing List</name>
-			<post>papyrus-sysml-users@eclipse.org</post>
-			<subscribe>https://dev.eclipse.org/mailman/listinfo/papyrus-sysml-users/</subscribe>
-			<unsubscribe>https://dev.eclipse.org/mailman/listinfo/papyrus-sysml-users/</unsubscribe>
-			<archive>https://dev.eclipse.org/mailman/listinfo/papyrus-sysml-users/</archive>
-		</mailingList>
-	</mailingLists>
 
 	<ciManagement>
 		<system>Hudson</system>

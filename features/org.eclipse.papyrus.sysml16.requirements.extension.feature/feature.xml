@@ -23,8 +23,8 @@
    </copyright>
 
    <requires>
-      <import feature="org.eclipse.papyrus.sdk.feature" version="5.0.0" match="compatible"/>
-      <import feature="org.eclipse.papyrus.sysml16.feature" version="0.0.0" match="compatible"/>
+      <import feature="org.eclipse.papyrus.sdk.feature" version="5.1.0" match="compatible"/>
+      <import feature="org.eclipse.papyrus.sysml16.feature" version="2.1.0" match="compatible"/>
    </requires>
 
    <plugin
