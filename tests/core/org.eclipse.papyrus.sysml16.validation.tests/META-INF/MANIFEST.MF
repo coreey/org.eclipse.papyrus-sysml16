@@ -10,7 +10,14 @@ Require-Bundle: org.eclipse.gmf.runtime.diagram.ui;bundle-version="[1.9.0,2.0.0)
  org.eclipse.papyrus.sysml16;bundle-version="[2.0.0,3.0.0)",
  org.eclipse.papyrus.uml.service.validation;bundle-version="[3.0.0,4.0.0)",
  org.eclipse.uml2.uml.profile.standard;bundle-version="[1.5.0,2.0.0)",
- org.junit;bundle-version="[4.13.0,5.0.0)"
+ org.junit;bundle-version="[4.13.0,5.0.0)",
+ org.eclipse.ocl;bundle-version="[3.5.0,4.0.0)",
+ org.eclipse.ocl.pivot;bundle-version="[1.0.1,2.0.0)",
+ org.eclipse.ocl.xtext.essentialocl;bundle-version="[1.0.1,2.0.0)",
+ org.eclipse.emf.validation.ocl;bundle-version="[1.4.0,2.0.0)",
+ org.eclipse.ocl.ecore;bundle-version="[3.5.0,4.0.0)",
+ org.eclipse.ocl.xtext.essentialocl.ui;bundle-version="[1.0.0,2.0.0)",
+ org.eclipse.ocl.xtext.completeocl;bundle-version="[1.14.0,2.0.0)"
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-Localization: plugin
 Export-Package: org.eclipse.papyrus.sysml16.validation.tests.ocl,
