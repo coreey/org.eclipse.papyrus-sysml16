@@ -108,8 +108,8 @@
     </ownedAxisConfigurations>
     <axisManagers xmi:type="nattableaxisconfiguration:AxisManagerRepresentation" xmi:id="_Pe60EMZPEeijBIWPt_NRXw" axisManagerId="org.eclipse.papyrus.infra.emf.nattable.axis.column.eobject.matrix.manager" labelProviderContext="org.eclipse.papyrus.infra.nattable.header.labelprovider" headerLabelConfiguration="_Pe6NBsZPEeijBIWPt_NRXw" specificAxisConfigurations="_Pe6NCcZPEeijBIWPt_NRXw"/>
   </columnHeaderAxisConfiguration>
-  <rowAxisProviders xmi:type="nattableaxisprovider:MasterObjectAxisProvider" xmi:id="_Pe60EcZPEeijBIWPt_NRXw" description="This axis provider manages the rows, according to the wanted hierarchy" name="HierarchicalRowAxisManager" disconnectSlave="true"/>
   <columnAxisProviders xmi:type="nattableaxisprovider:MasterObjectAxisProvider" xmi:id="_Pe60EsZPEeijBIWPt_NRXw" description="This axis provider manages the columns, according to the wanted hierarchy" name="HierarchicalColumnsAxisManager" disconnectSlave="true"/>
+  <rowAxisProviders xmi:type="nattableaxisprovider:MasterObjectAxisProvider" xmi:id="_Pe60EcZPEeijBIWPt_NRXw" description="This axis provider manages the rows, according to the wanted hierarchy" name="HierarchicalRowAxisManager" disconnectSlave="true"/>
   <ownedCellEditorConfigurations xmi:type="nattablecelleditor:GenericRelationshipMatrixCellEditorConfiguration" xmi:id="_Pe60E8ZPEeijBIWPt_NRXw" cellEditorId="GenericRelationshipMatrixEditorConfiguration" direction="FROM_ROW_TO_COLUMN" relationshipOwnerStrategy="DEFAULT">
     <editedElement xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.sysml16.service.types/model/SysML16.elementtypesconfigurations#org.eclipse.papyrus.SysML16.Allocate_Abstraction"/>
   </ownedCellEditorConfigurations>
