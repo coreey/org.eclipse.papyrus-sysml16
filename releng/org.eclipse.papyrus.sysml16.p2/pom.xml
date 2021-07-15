@@ -39,7 +39,7 @@
 								<update.site.nightly>https://ci.eclipse.org/papyrus/job/papyrus-sysml16-master/lastSuccessfulBuild/artifact/releng/org.eclipse.papyrus.sysml16.p2/target/repository/</update.site.nightly>
 							</symbols>
 							<associateSites>
-								<site>https://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/master/</site>
+								<site>https://download.eclipse.org/modeling/mdt/papyrus/updates/releases/2021-03</site>
 							</associateSites>
 							<p2StatsUrl>http://download.eclipse.org/stats</p2StatsUrl>
 						</configuration>
