@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<architecture:ArchitectureDomain xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:architecture="http://www.eclipse.org/papyrus/infra/core/architecture" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:elementtypesconfigurations="http://www.eclipse.org/papyrus/infra/elementtypesconfigurations/1.2" xmlns:gmfdiagrepresentation="http://www.eclipse.org/papyrus/infra/gmfdiag/representation" xmlns:nattableconfiguration="http://www.eclipse.org/papyrus/nattable/model/nattableconfiguration" xmlns:nattablerepresentation="http://www.eclipse.org/papyrus/infra/nattable/representation" xmlns:paletteconfiguration="http://www.eclipse.org/papyrus/diagram/paletteconfiguration/0.8" xmlns:representation="http://www.eclipse.org/papyrus/infra/core/architecture/representation" xmi:id="org.eclipse.papyrus.sysml16.systemsEngineering" id="org.eclipse.papyrus.sysml16.systemsEngineering" name="Systems Engineering" description="The domain of developing software systems" icon="platform:/plugin/org.eclipse.papyrus.uml.architecture/icons/domain.gif">
+<architecture:ArchitectureDomain xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:architecture="http://www.eclipse.org/papyrus/infra/core/architecture" xmlns:custom="http://www.eclipse.org/papyrus/emf/facet/custom/0.2.incubation/custom" xmlns:customizationconfiguration="http://www.eclipse.org/papyrus/emf/facet/architecture/configuration" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:elementtypesconfigurations="http://www.eclipse.org/papyrus/infra/elementtypesconfigurations/1.2" xmlns:gmfdiagrepresentation="http://www.eclipse.org/papyrus/infra/gmfdiag/representation" xmlns:nattableconfiguration="http://www.eclipse.org/papyrus/nattable/model/nattableconfiguration" xmlns:nattablerepresentation="http://www.eclipse.org/papyrus/infra/nattable/representation" xmlns:paletteconfiguration="http://www.eclipse.org/papyrus/diagram/paletteconfiguration/0.8" xmlns:representation="http://www.eclipse.org/papyrus/infra/core/architecture/representation" xmi:id="org.eclipse.papyrus.sysml16.systemsEngineering" id="org.eclipse.papyrus.sysml16.systemsEngineering" name="Systems Engineering" description="The domain of developing software systems" icon="platform:/plugin/org.eclipse.papyrus.uml.architecture/icons/domain.gif">
   <stakeholders xmi:type="architecture:Stakeholder" xmi:id="org.eclipse.papyrus.sysml16.stackholder.systemsEngineer" id="org.eclipse.papyrus.sysml16.stackholder.systemsEngineer" name="Systems Engineer" description="An engineer interested in system development" concerns="org.eclipse.papyrus.sysml16.concern.requirements org.eclipse.papyrus.sysml16.concern.parametrics"/>
   <concerns xmi:type="architecture:Concern" xmi:id="org.eclipse.papyrus.sysml16.concern.requirements" id="org.eclipse.papyrus.sysml16.concern.requirements" name="Requirements" description="The concern of developing the system's requirements"/>
   <concerns xmi:type="architecture:Concern" xmi:id="org.eclipse.papyrus.sysml16.concern.parametrics" id="org.eclipse.papyrus.sysml16.concern.parametrics" name="Parametrics" description="The concern of developing the system's parametrics"/>
@@ -360,5 +360,35 @@
     </representationKinds>
     <metamodel xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML#/"/>
     <profiles xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#/"/>
+    <treeViewerConfigurations xmi:type="customizationconfiguration:EMFFacetTreeViewerConfiguration" xmi:id="_RsCCAOrfEeu7fMLw0G-MYA" description="Customizations registered by default for SysML">
+      <customizationReferences xmi:type="customizationconfiguration:CustomizationReference" xmi:id="_YAwvcOrfEeu7fMLw0G-MYA" description="Papyrus Diagram Customization">
+        <referencedCustomization xmi:type="custom:Customization" href="platform:/plugin/org.eclipse.papyrus.infra.gmfdiag.modelexplorer/resources/PapyrusDiagram.custom#/"/>
+        <applicationRule xmi:type="customizationconfiguration:AbsoluteOrder" xmi:id="_2xdxoOrhEeu7fMLw0G-MYA" order="0"/>
+      </customizationReferences>
+      <customizationReferences xmi:type="customizationconfiguration:CustomizationReference" xmi:id="_ys2ssOrhEeu7fMLw0G-MYA" description="Papyrus Table Customization">
+        <referencedCustomization xmi:type="custom:Customization" href="platform:/plugin/org.eclipse.papyrus.infra.nattable.modelexplorer/resources/PapyrusTable.custom#/"/>
+        <applicationRule xmi:type="customizationconfiguration:AbsoluteOrder" xmi:id="_3cd2cOrhEeu7fMLw0G-MYA" order="20"/>
+      </customizationReferences>
+      <customizationReferences xmi:type="customizationconfiguration:CustomizationReference" xmi:id="_6XljwOrhEeu7fMLw0G-MYA" description="Papyrus Simple UML Customization">
+        <referencedCustomization xmi:type="custom:Customization" href="platform:/plugin/org.eclipse.papyrus.uml.modelexplorer/resource/SimpleUML.custom#/"/>
+        <applicationRule xmi:type="customizationconfiguration:AbsoluteOrder" xmi:id="_7jjnoOrhEeu7fMLw0G-MYA" order="40"/>
+      </customizationReferences>
+      <customizationReferences xmi:type="customizationconfiguration:CustomizationReference" xmi:id="__Gv6MOrkEeu7fMLw0G-MYA" description="SysML16 System View Customization">
+        <referencedCustomization xmi:type="custom:Customization" href="platform:/plugin/org.eclipse.papyrus.sysml16.modelexplorer/resources/System.custom#/"/>
+        <applicationRule xmi:type="customizationconfiguration:AbsoluteOrder" xmi:id="_LpFZYOrlEeu7fMLw0G-MYA" order="50"/>
+      </customizationReferences>
+      <customizationReferences xmi:type="customizationconfiguration:CustomizationReference" xmi:id="_99_CsOrhEeu7fMLw0G-MYA" description="Papyrus Opened Page Customization">
+        <referencedCustomization xmi:type="custom:Customization" href="platform:/plugin/org.eclipse.papyrus.views.modelexplorer/resources/OpenedPage.custom#/"/>
+        <applicationRule xmi:type="customizationconfiguration:AbsoluteOrder" xmi:id="_CnngQOriEeu7fMLw0G-MYA" order="60"/>
+      </customizationReferences>
+      <customizationReferences xmi:type="customizationconfiguration:CustomizationReference" xmi:id="_EdjHIOriEeu7fMLw0G-MYA" description="Papyrus Stereotype Display Customization">
+        <referencedCustomization xmi:type="custom:Customization" href="platform:/plugin/org.eclipse.papyrus.uml.modelexplorer/resource/StereotypeDisplay.custom#/"/>
+        <applicationRule xmi:type="customizationconfiguration:AbsoluteOrder" xmi:id="_Hl70YOriEeu7fMLw0G-MYA" order="80"/>
+      </customizationReferences>
+      <customizationReferences xmi:type="customizationconfiguration:CustomizationReference" xmi:id="_JPrZYOriEeu7fMLw0G-MYA" description="Papyrus Read Only Element Customization">
+        <referencedCustomization xmi:type="custom:Customization" href="platform:/plugin/org.eclipse.papyrus.views.modelexplorer/resources/ReadOnlyElement.custom#/"/>
+        <applicationRule xmi:type="customizationconfiguration:AbsoluteOrder" xmi:id="_NaAEwOriEeu7fMLw0G-MYA" order="100"/>
+      </customizationReferences>
+    </treeViewerConfigurations>
   </contexts>
 </architecture:ArchitectureDomain>
