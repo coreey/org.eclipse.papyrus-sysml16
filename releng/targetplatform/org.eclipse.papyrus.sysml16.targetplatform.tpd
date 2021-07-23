@@ -18,3 +18,7 @@ location "https://download.eclipse.org/modeling/mdt/papyrus/updates/releases/202
  org.eclipse.papyrus.sdk.feature.feature.group lazy
  org.eclipse.papyrus.toolsmiths.feature.feature.group lazy
 }
+
+location orbit "https://download.eclipse.org/tools/orbit/downloads/drops/R20210223232630/repository/" {
+ org.apache.xerces [2.9.0, 2.10.0)
+}
