@@ -15,6 +15,7 @@
 	<modules>
 		<module>org.eclipse.papyrus.sysml16.feature</module>
 		<module>org.eclipse.papyrus.sysml16.requirements.extension.feature</module>
+		<module>org.eclipse.papyrus.sysml16.elementgroup.feature</module>
 	</modules>
 
 	<profiles>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+    <extension point="org.eclipse.emf.ecore.uri_mapping">
+   <!-- @generated NOT cluster -->
+      <mapping
+            source="pathmap://CLUSTER_PATHMAP/"
+            target="platform:/plugin/org.eclipse.papyrus.sysml16.elementgroup/resources/">
+      </mapping>
+   </extension>
+   <extension
+         point="org.eclipse.uml2.uml.generated_package">
+         <!-- @generated NOT cluster -->
+      <profile
+            location="pathmap://CLUSTER_PATHMAP/cluster.profile.uml#ClusterProfile-ID"
+            uri="http://www.eclipse.org/papyrus/Cluster">
+      </profile>
+   </extension>
+   <extension
+         point="org.eclipse.emf.ecore.factory_override">
+      <factory
+            class="org.eclipse.papyrus.sysml16.elementgroup.internal.impl.CustomClusterFactoryImpl"
+            uri="http://www.eclipse.org/papyrus/Cluster">
+      </factory>
+   </extension>
+
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated cluster.profile -->
+      <package
+            uri="http://www.eclipse.org/papyrus/Cluster"
+            class="org.eclipse.papyrus.sysml16.elementgroup.cluster.ClusterPackage"
+            genModel="resources/cluster.profile.genmodel"/>
+   </extension>
+
+</plugin>

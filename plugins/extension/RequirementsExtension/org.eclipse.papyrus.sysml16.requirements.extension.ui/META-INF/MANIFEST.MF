@@ -17,4 +17,4 @@ Bundle-ActivationPolicy: lazy
 Bundle-Localization: plugin
 Bundle-Description: %Bundle-Description
 Bundle-Vendor: %Bundle-Vendor
-Automatic-Module-Name: org.eclipse.papyrus.sysml16.ui
+Automatic-Module-Name: org.eclipse.papyrus.sysml16.requirements.extension.ui

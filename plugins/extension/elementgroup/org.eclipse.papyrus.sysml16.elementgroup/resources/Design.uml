@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Requirements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//requirements">
+  <uml:Model xmi:id="_ppCjsIwcEeiP09V4EdWAwg" name="Design">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_xTZAQIwcEeiP09V4EdWAwg">
+      <body>VisualisationReq001:&#xD;
+ Each category shall been seen in the model explorer. &#xD;
+VisualisationReq002:&#xD;
+All the elements referenced by the categories are displayed as if they were contained by this category.&#xD;
+</body>
+    </ownedComment>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_pu1CoIwcEeiP09V4EdWAwg">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_pvNdIIwcEeiP09V4EdWAwg">
+      <importedPackage xmi:type="uml:Package" href="pathmap://SysML16_LIBRARIES/SysML-Standard-Library.uml#SysML.package_packagedElement_Libraries"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_LpRH0IwdEeiP09V4EdWAwg" name="RequirementCluster:">
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_ikH6AIwdEeiP09V4EdWAwg" name="StructureReq001&#xD;"/>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_ikQc4IwdEeiP09V4EdWAwg" name="StructureReq002&#xD;"/>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_ikS5IIwdEeiP09V4EdWAwg" name="StructureReq003&#xD;"/>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_ikUuUIwdEeiP09V4EdWAwg" name="StructureReq004&#xD;"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_puuU8IwcEeiP09V4EdWAwg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_puwxMIwcEeiP09V4EdWAwg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_pux_UIwcEeiP09V4EdWAwg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pux_UYwcEeiP09V4EdWAwg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//activities"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Activities"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_pux_UowcEeiP09V4EdWAwg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_puymYIwcEeiP09V4EdWAwg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//allocations"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Allocations"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_puymYYwcEeiP09V4EdWAwg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_puymYowcEeiP09V4EdWAwg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//blocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_puymY4wcEeiP09V4EdWAwg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_puymZIwcEeiP09V4EdWAwg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//constraintblocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ConstraintBlocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_puzNcIwcEeiP09V4EdWAwg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_puzNcYwcEeiP09V4EdWAwg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//deprecatedelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_DeprecatedElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_puzNcowcEeiP09V4EdWAwg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_puzNc4wcEeiP09V4EdWAwg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//modelelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ModelElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_puzNdIwcEeiP09V4EdWAwg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_puzNdYwcEeiP09V4EdWAwg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//portsandflows"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Ports_u0026Flows"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_puz0gIwcEeiP09V4EdWAwg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_puz0gYwcEeiP09V4EdWAwg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//requirements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Requirements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_puz0gowcEeiP09V4EdWAwg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_puz0g4wcEeiP09V4EdWAwg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <Requirements:Requirement xmi:id="_LpiNkIwdEeiP09V4EdWAwg" id="RequirementCluster" text="The idea is to use ElementGroup of SysML in order to cluster elements by categories and not only by the structure of UML i. e. the owner of the element.&#xD;" base_Class="_LpRH0IwdEeiP09V4EdWAwg"/>
+  <Requirements:Requirement xmi:id="_ikNZkIwdEeiP09V4EdWAwg" id="StructureReq001&#xD;" text="A category is a SysML elementGroup.&#xD;" base_Class="_ikH6AIwdEeiP09V4EdWAwg"/>
+  <Requirements:Requirement xmi:id="_ikSSEIwdEeiP09V4EdWAwg" id="StructureReq002&#xD;" text="A category can be contained into another category.&#xD;" base_Class="_ikQc4IwdEeiP09V4EdWAwg"/>
+  <Requirements:Requirement xmi:id="_ikUHQIwdEeiP09V4EdWAwg" id="StructureReq003&#xD;" text="A DerivedElementGroup must inherits from elementGroup. A request can be associated to a category in order to compute children. The default behavior is to write request in OCL.&#xD;" base_Class="_ikS5IIwdEeiP09V4EdWAwg"/>
+  <Requirements:Requirement xmi:id="_ikV8cIwdEeiP09V4EdWAwg" id="StructureReq004&#xD;" text="A request can be associated to a category in order to compute children. The default behavior is to write request with EASE.&#xD;" base_Class="_ikUuUIwdEeiP09V4EdWAwg"/>
+</xmi:XMI>

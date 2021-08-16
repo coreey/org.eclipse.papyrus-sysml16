@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="cluster" nsURI="http://www.eclipse.org/papyrus/Cluster" nsPrefix="Cluster">
+  <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <details key="originalName" value="Cluster"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="IntentionalElementGroup" eSuperTypes="../../org.eclipse.papyrus.sysml16/resources/profile/SysML.profile.ecore#//modelelements/ElementGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="computedBy" ordered="false"
+        upperBound="-1" eType="#//OpaqueRequest" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="computedMembers" ordered="false"
+        upperBound="-1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Element"
+        volatile="true" transient="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OpaqueRequest">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="request" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="language" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom:Customization xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:custom="http://www.eclipse.org/papyrus/emf/facet/custom/0.2.incubation/custom" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:efacet="http://www.eclipse.org/papyrus/emf/facet/efacet/0.2.incubation/efacet" xmlns:javaQuery="http://www.eclipse.org/papyrus/emf/facet/query/java/0.2.incubation/javaquery" name="ElementGroup" documentation="This customization is used to display Requirement by using element group" mustBeLoadedByDefault="true">
+  <eClassifiers xsi:type="custom:EClassCustomization" name="Element">
+    <extendedMetaclass href="http://www.eclipse.org/uml2/5.0.0/UML#//Element"/>
+    <facetElements xsi:type="efacet:FacetReference" name="orderedMembers" upperBound="-1" volatile="true" transient="true" derived="true">
+      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Element"/>
+      <query xsi:type="javaQuery:JavaQuery" implementationClassName="org.eclipse.papyrus.sysml16.elementgroup.ui.queries.element.OrderedMembersQuery"/>
+    </facetElements>
+    <facetElements xsi:type="efacet:FacetReference" name="dynamicMembers" upperBound="-1" volatile="true" transient="true" derived="true">
+      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Element"/>
+      <query xsi:type="javaQuery:JavaQuery" implementationClassName="org.eclipse.papyrus.sysml16.elementgroup.ui.queries.element.DynamicMembersQuery"/>
+    </facetElements>
+    <facetOperations name="displayName">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="eReference">
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EReference"/>
+      </eParameters>
+      <query xsi:type="javaQuery:JavaQuery" implementationClassName="org.eclipse.papyrus.sysml16.elementgroup.ui.queries.element.DisplayElementGroupNameQuery"/>
+      <override xsi:type="efacet:FacetOperation" href="platform:/plugin/org.eclipse.papyrus.emf.facet.custom.ui/resources/customproperties.efacet#//CustomizedEObject/label"/>
+    </facetOperations>
+    <facetOperations name="displayElementGroupBold">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eParameters name="eObject">
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eParameters>
+      <query xsi:type="javaQuery:JavaQuery" implementationClassName="org.eclipse.papyrus.sysml16.elementgroup.ui.queries.element.IsBoldQuery"/>
+      <override xsi:type="efacet:FacetOperation" href="platform:/plugin/org.eclipse.papyrus.emf.facet.custom.ui/resources/customproperties.efacet#//CustomizedEObject/isBold"/>
+    </facetOperations>
+    <extendedFacets href="platform:/plugin/org.eclipse.papyrus.emf.facet.custom.ui/resources/customproperties.efacet#//CustomizedEObject"/>
+  </eClassifiers>
+</custom:Customization>

@@ -12,6 +12,9 @@
    <feature url="features/org.eclipse.papyrus.sysml16.requirements.extension.feature.source_2.0.0.qualifier.jar" id="org.eclipse.papyrus.sysml16.requirements.extension.feature.source" version="2.0.0.qualifier">
       <category name="org.eclipse.papyrus.category"/>
    </feature>
+   <feature url="features/org.eclipse.papyrus.sysml16.elementgroup.feature_1.0.0.qualifier.jar" id="org.eclipse.papyrus.sysml16.elementgroup.feature" version="1.0.0.qualifier">
+      <category name="org.eclipse.papyrus.category"/>
+   </feature>
    <category-def name="org.eclipse.papyrus.category" label="Papyrus SysML 1.6 Category">
       <description>
          Papyrus SysML 1.6 Category
