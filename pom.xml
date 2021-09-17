@@ -29,13 +29,13 @@
 		<tycho.scmUrl>${project.scm.connection}</tycho.scmUrl>
 
 		<!-- platform specific properties -->
-		<eclipse.targetrelease>2021-03</eclipse.targetrelease>
+		<eclipse.targetrelease>2021-09</eclipse.targetrelease>
 		<target.version>2.0.0-SNAPSHOT</target.version> 
 		<target.groupId>org.eclipse.papyrus.sysml</target.groupId>
 		<target.artifactId>org.eclipse.papyrus.sysml16.targetplatform</target.artifactId>
 
-		<tycho.version>2.0.0</tycho.version>
-		<tychoExtras.version>2.0.0</tychoExtras.version>
+		<tycho.version>2.2.0</tycho.version>
+		<tychoExtras.version>2.2.0</tychoExtras.version>
 		<xtext.version>2.23.0</xtext.version>
 		<maven.resources.version>3.2.0</maven.resources.version>
 		<maven.clean.version>3.1.0</maven.clean.version>

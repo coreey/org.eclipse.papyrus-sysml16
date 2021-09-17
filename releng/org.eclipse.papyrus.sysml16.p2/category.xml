@@ -20,5 +20,5 @@
          Papyrus SysML 1.6 Category
       </description>
    </category-def>
-   <repository-reference location="https://download.eclipse.org/modeling/mdt/papyrus/updates/releases/2021-03/" enabled="true" />
+   <repository-reference location="https://download.eclipse.org/modeling/mdt/papyrus/updates/releases/2021-09/" enabled="true" />
 </site>
