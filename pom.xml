@@ -48,6 +48,12 @@
 		<jboss.utils.version>1.7.0</jboss.utils.version>
 		<java.source.version>11</java.source.version>
 		<java.target.version>11</java.target.version>
+		
+		<!-- Timestamp used in various places, e.g. the about dialog (see about.mappings) -->
+		<eclipse.simultaneous.release.build>${maven.build.timestamp}</eclipse.simultaneous.release.build>
+		<!-- Human readable name of the release, e.g. used in the about dialog 
+			(see about.mappings)  -->
+		<eclipse.simultaneous.release.name>2021-09 (4.21)</eclipse.simultaneous.release.name> 
 	</properties>
 
 	<ciManagement>

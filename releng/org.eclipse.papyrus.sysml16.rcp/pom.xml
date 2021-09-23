@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
@@ -11,4 +12,61 @@
 	<packaging>eclipse-plugin</packaging>
 	<name>org.eclipse.papyrus.sysml16.rcp</name>
 	<description>This plugins defines the Rich Client Platform for SysML 1.6 application.</description>
+
+
+	<profiles>
+		<profile>
+			<id>update-branding-plugins-about.mappings</id>
+			<activation>
+				<file>
+					<exists>${basedir}/about.mappings</exists>
+				</file>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-resources-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>process-about.mappings</id>
+								<phase>prepare-package</phase>
+								<configuration>
+									<outputDirectory>${project.build.directory}</outputDirectory>
+									<overwrite>true</overwrite>
+									<resources>
+										<resource>
+											<directory>${basedir}</directory>
+											<includes>
+												<include>about.mappings</include>
+											</includes>
+											<filtering>true</filtering>
+										</resource>
+									</resources>
+								</configuration>
+								<goals>
+									<goal>copy-resources</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.eclipse.tycho</groupId>
+						<artifactId>tycho-packaging-plugin</artifactId>
+						<version>${tycho.version}</version>
+						<configuration>
+							<additionalFileSets>
+								<fileSet>
+									<directory>${project.build.directory}</directory>
+									<includes>
+										<include>about.mappings</include>
+									</includes>
+								</fileSet>
+							</additionalFileSets>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>
