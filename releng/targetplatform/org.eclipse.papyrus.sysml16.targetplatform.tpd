@@ -13,7 +13,7 @@ location "https://download.eclipse.org/cbi/updates/license/" license-feature{
  org.eclipse.license.feature.group lazy
 }
 
-location "https://download.eclipse.org/modeling/mdt/papyrus/updates/releases/2021-09/" Papyrus-2021-09 {
+location "https://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/master/" Papyrus {
  org.eclipse.papyrus.junit.feature.feature.group lazy
  org.eclipse.papyrus.sdk.feature.feature.group lazy
  org.eclipse.papyrus.toolsmiths.feature.feature.group lazy
