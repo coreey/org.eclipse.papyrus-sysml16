@@ -29,7 +29,7 @@
 		<tycho.scmUrl>${project.scm.connection}</tycho.scmUrl>
 
 		<!-- platform specific properties -->
-		<eclipse.targetrelease>2021-09</eclipse.targetrelease>
+		<eclipse.targetrelease>2021-12</eclipse.targetrelease>
 		<target.version>2.0.0-SNAPSHOT</target.version> 
 		<target.groupId>org.eclipse.papyrus.sysml</target.groupId>
 		<target.artifactId>org.eclipse.papyrus.sysml16.targetplatform</target.artifactId>
@@ -53,7 +53,7 @@
 		<eclipse.simultaneous.release.build>${maven.build.timestamp}</eclipse.simultaneous.release.build>
 		<!-- Human readable name of the release, e.g. used in the about dialog 
 			(see about.mappings)  -->
-		<eclipse.simultaneous.release.name>2021-09 (4.21)</eclipse.simultaneous.release.name> 
+		<eclipse.simultaneous.release.name>2021-12 (4.22)</eclipse.simultaneous.release.name> 
 	</properties>
 
 	<ciManagement>

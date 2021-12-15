@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/eclipse-cbi/targetplatform-dsl -->
-<target name="SysML 1.6 - 2021-09" sequenceNumber="1634807126">
+<target name="SysML 1.6 - 2021-12" sequenceNumber="1639558698">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.platform.feature.group" version="0.0.0"/>
@@ -10,7 +10,8 @@
       <unit id="org.eclipse.equinox.p2.discovery.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.equinox.executable.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.ocl.uml.feature.group" version="0.0.0"/>
-      <repository id="eclipse-2021-09" location="http://download.eclipse.org/releases/2021-09/"/>
+      <unit id="org.eclipse.xwt.feature.feature.group" version="0.0.0"/>
+      <repository id="eclipse-2021-12" location="http://download.eclipse.org/releases/2021-12/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.license.feature.group" version="0.0.0"/>
@@ -20,15 +21,11 @@
       <unit id="org.eclipse.papyrus.junit.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.papyrus.sdk.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.papyrus.toolsmiths.feature.feature.group" version="0.0.0"/>
-      <repository id="Papyrus" location="https://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/master/"/>
+      <repository id="Papyrus" location="https://download.eclipse.org/modeling/mdt/papyrus/updates/releases/2021-12"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.apache.xerces" version="2.9.0.v201101211617"/>
-      <repository id="orbit" location="https://download.eclipse.org/tools/orbit/downloads/drops/R20210825222808/repository/"/>
-    </location>
-    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.eclipse.xwt.feature.feature.group" version="0.0.0"/>
-      <repository id="xwt" location="https://download.eclipse.org/xwt/milestones-1.7.0/1.7.0-S/"/>
+      <repository id="orbit" location="https://download.eclipse.org/tools/orbit/downloads/drops/R20211122181901/repository/"/>
     </location>
   </locations>
 </target>
