@@ -1,7 +1,7 @@
-target "SysML 1.6 - 2021-12" with source requirements
+target "SysML 1.6 - 2022-03" with source requirements
 
 //manual update
-location "http://download.eclipse.org/releases/2021-12/" eclipse-2021-12 {
+location "http://download.eclipse.org/releases/2022-03/" eclipse-2022-03 {
  org.eclipse.platform.feature.group lazy
  org.eclipse.rcp.feature.group lazy
  org.eclipse.jdt.feature.group lazy
@@ -17,10 +17,9 @@ location "https://download.eclipse.org/cbi/updates/license/" license-feature{
 }
 
 //manual update
-location "https://download.eclipse.org/modeling/mdt/papyrus/updates/releases/2021-12" Papyrus {
+location "https://download.eclipse.org/modeling/mdt/papyrus/updates/releases/2022-03" Papyrus {
  org.eclipse.papyrus.junit.feature.feature.group lazy
  org.eclipse.papyrus.sdk.feature.feature.group lazy
- org.eclipse.papyrus.toolsmiths.feature.feature.group lazy
 }
 
 //manual update
@@ -29,6 +28,6 @@ location "https://download.eclipse.org/justj/jres/11/updates/release" JustJ-11 {
 }
 
 //manual update
-location "https://download.eclipse.org/tools/orbit/downloads/drops/R20211122181901/repository/" orbit {
+location "https://download.eclipse.org/tools/orbit/downloads/drops/R20220302172233/repository/" orbit {
  org.apache.xerces [2.9.0, 2.10.0)
 }
