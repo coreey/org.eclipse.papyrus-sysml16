@@ -43,7 +43,7 @@
 		<findbugs.version>3.0.5</findbugs.version>
 		<maven.compiler.version>3.8.1</maven.compiler.version>
 		<!-- https://repo.eclipse.org/content/repositories/cbi-releases/ -->
-		<eclipse-cbi.version>1.3.2</eclipse-cbi.version>
+		<jarSigner.version>1.3.1</jarSigner.version>
 		<!-- https://repository.jboss.org/ -->
 		<jboss.utils.version>1.7.0</jboss.utils.version>
 		<java.source.version>11</java.source.version>
@@ -320,38 +320,13 @@
 					<value>true</value>
 				</property>
 			</activation>
+			<!-- Pack200 -->
 			<build>
 				<plugins>
 					<plugin>
 						<groupId>org.eclipse.cbi.maven.plugins</groupId>
 						<artifactId>eclipse-jarsigner-plugin</artifactId>
-						<version>${eclipse-cbi.version}</version>
-						<executions>
-							<execution>
-								<id>sign</id>
-								<goals>
-									<goal>sign</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-					<plugin>
-						<groupId>org.eclipse.cbi.maven.plugins</groupId>
-						<artifactId>eclipse-macsigner-plugin</artifactId>
-						<version>${eclipse-cbi.version}</version>
-						<executions>
-							<execution>
-								<id>sign</id>
-								<goals>
-									<goal>sign</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-					<plugin>
-						<groupId>org.eclipse.cbi.maven.plugins</groupId>
-						<artifactId>eclipse-winsigner-plugin</artifactId>
-						<version>${eclipse-cbi.version}</version>
+						<version>${jarSigner.version}</version>
 						<executions>
 							<execution>
 								<id>sign</id>
