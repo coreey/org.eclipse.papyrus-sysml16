@@ -30,7 +30,7 @@
 
 		<!-- platform specific properties -->
 		<eclipse.targetrelease>2022-03</eclipse.targetrelease>
-		<target.version>2.0.0-SNAPSHOT</target.version> 
+		<target.version>2.0.0-SNAPSHOT</target.version>
 		<target.groupId>org.eclipse.papyrus.sysml</target.groupId>
 		<target.artifactId>org.eclipse.papyrus.sysml16.targetplatform</target.artifactId>
 
@@ -43,17 +43,17 @@
 		<findbugs.version>3.0.5</findbugs.version>
 		<maven.compiler.version>3.8.1</maven.compiler.version>
 		<!-- https://repo.eclipse.org/content/repositories/cbi-releases/ -->
-		<jarSigner.version>1.3.1</jarSigner.version>
+		<eclipse-cbi.version>1.3.2</eclipse-cbi.version>
 		<!-- https://repository.jboss.org/ -->
 		<jboss.utils.version>1.7.0</jboss.utils.version>
 		<java.source.version>11</java.source.version>
 		<java.target.version>11</java.target.version>
-		
+
 		<!-- Timestamp used in various places, e.g. the about dialog (see about.mappings) -->
 		<eclipse.simultaneous.release.build>${maven.build.timestamp}</eclipse.simultaneous.release.build>
 		<!-- Human readable name of the release, e.g. used in the about dialog 
-			(see about.mappings)  -->
-		<eclipse.simultaneous.release.name>2022-03 (4.23)</eclipse.simultaneous.release.name> 
+			(see about.mappings) -->
+		<eclipse.simultaneous.release.name>2022-03 (4.23)</eclipse.simultaneous.release.name>
 	</properties>
 
 	<ciManagement>
@@ -98,6 +98,12 @@
 			<id>org.eclipse.cbi.maven.plugins</id>
 			<name>Eclipse CBI</name>
 			<url>https://repo.eclipse.org/content/repositories/cbi-releases/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
 		</pluginRepository>
 		<pluginRepository>
 			<id>org.jboss.tools.tycho-plugins</id>
@@ -147,6 +153,21 @@
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>exec-maven-plugin</artifactId>
 					<version>${mojo.execmaven.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.cbi.maven.plugins</groupId>
+					<artifactId>eclipse-jarsigner-plugin</artifactId>
+					<version>${eclipse-cbi.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.cbi.maven.plugins</groupId>
+					<artifactId>eclipse-macsigner-plugin</artifactId>
+					<version>${eclipse-cbi.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.cbi.maven.plugins</groupId>
+					<artifactId>eclipse-winsigner-plugin</artifactId>
+					<version>${eclipse-cbi.version}</version>
 				</plugin>
 
 				<plugin>
@@ -311,6 +332,7 @@
 			</build>
 		</profile>
 
+
 		<!-- Stable release profile. Takes +30min. Eclipse servers only -->
 		<profile>
 			<id>sign</id>
@@ -320,13 +342,11 @@
 					<value>true</value>
 				</property>
 			</activation>
-			<!-- Pack200 -->
 			<build>
 				<plugins>
 					<plugin>
 						<groupId>org.eclipse.cbi.maven.plugins</groupId>
 						<artifactId>eclipse-jarsigner-plugin</artifactId>
-						<version>${jarSigner.version}</version>
 						<executions>
 							<execution>
 								<id>sign</id>
