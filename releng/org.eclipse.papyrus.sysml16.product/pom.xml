@@ -55,9 +55,57 @@
 						<goals>
 							<goal>archive-products</goal>
 						</goals>
+						<phase>pre-integration-test</phase>
 					</execution>
 				</executions>
 			</plugin>
 		</plugins>
 	</build>
+	
+	<profiles>
+		<profile>
+			<id>sign</id>
+			<activation>
+				<property>
+					<name>SIGN</name>
+					<value>true</value>
+				</property>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.eclipse.cbi.maven.plugins</groupId>
+						<artifactId>eclipse-macsigner-plugin</artifactId>
+						<configuration>
+							<fileNames>Papyrus.app</fileNames>
+							<entitlements>${project.basedir}/application.entitlement</entitlements>
+						</configuration>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.eclipse.cbi.maven.plugins</groupId>
+						<artifactId>eclipse-winsigner-plugin</artifactId>
+						<configuration>
+							<fileNames>Papyrus.exe,eclipsec.exe</fileNames>
+						</configuration>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>
