@@ -7,16 +7,15 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
    width="16"
    height="16"
    viewBox="0 0 16 16"
-   sodipodi:docname="FlowPort_INOUT_A_EAST.svg">
+   sodipodi:docname="west.svg">
   <metadata
      id="metadata8">
     <rdf:RDF>
@@ -40,26 +39,66 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="837"
-     inkscape:window-height="480"
+     inkscape:window-width="1661"
+     inkscape:window-height="872"
      id="namedview4"
-     showgrid="false"
+     showgrid="true"
      inkscape:zoom="14.75"
-     inkscape:cx="8"
-     inkscape:cy="8"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:cx="20.153403"
+     inkscape:cy="1.4915254"
+     inkscape:window-x="547"
+     inkscape:window-y="241"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg2" />
-  <image
-     width="16"
-     height="16"
-     preserveAspectRatio="none"
-     xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAGBJREFU
-OI3VkzkOwCAMBDP+/58nVaQcXqdAKeIKtAdrA6jbStWS+jMDQMC0Hw0SMWGVCCrd+m5SHXAWvJmg
-jrGnUlm+BY6H9NZC4lQn6lpKB1xaiIMa0j1mkOInjP9/ph0Wp0QZPKv13wAAAABJRU5ErkJggg==
-"
-     id="image10"
-     x="0"
-     y="0" />
+     inkscape:current-layer="svg2">
+    <inkscape:grid
+       type="xygrid"
+       id="grid822" />
+  </sodipodi:namedview>
+  <g
+     id="g828"
+     transform="rotate(90,7.9724907,8.091134)">
+    <path
+       inkscape:connector-curvature="0"
+       id="path814"
+       d="M 7.8813563,14.589049 V 1.555151"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.98043358px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" />
+    <g
+       transform="matrix(0,-1.1090225,-1,0,15.474577,17.15385)"
+       id="g834">
+      <path
+         style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 10,11 14.508475,7.5932203"
+         id="path816"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0" />
+      <path
+         style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 10,4 4.508475,3.5932203"
+         id="path820"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0" />
+    </g>
+    <path
+       inkscape:connector-curvature="0"
+       inkscape:connector-type="polyline"
+       id="path826"
+       d="m 14.508475,7.9958287 v 0"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <g
+       transform="matrix(0,1.1090225,-1,0,15.474577,-1.5011762)"
+       id="g834-3">
+      <path
+         style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 10,11 14.508475,7.5932203"
+         id="path816-6"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0" />
+      <path
+         style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 10,4 4.508475,3.5932203"
+         id="path820-7"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
 </svg>
