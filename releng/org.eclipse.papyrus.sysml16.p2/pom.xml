@@ -12,40 +12,4 @@
 	<name>org.eclipse.papyrus.sysml16.p2</name>
 	<description>This plugin defines the update site of SysML 1.6 plugins and feature.</description>
 
-	<build>
-		<plugins>
-			<plugin>
-				<!-- https://github.com/jbosstools/jbosstools-maven-plugins/wiki -->
-				<groupId>org.jboss.tools.tycho-plugins</groupId>
-				<artifactId>repository-utils</artifactId>
-				<version>${jboss.utils.version}</version>
-				<executions>
-					<execution>
-						<id>generate-facade</id>
-						<phase>package</phase>
-						<goals>
-							<goal>generate-repository-facade</goal>
-						</goals>
-						<configuration>
-							<!-- do not generate the pesky web folder and index.html -->
-							<skipWebContentGeneration>true</skipWebContentGeneration>
-							<symbols>
-								<update.site.name>SysML 1.6</update.site.name>
-								<update.site.description>Use this URL in Eclipse to install	SysML 1.6</update.site.description>
-								<update.site.version>${project.version}</update.site.version>
-								<project.website>https://www.eclipse.org/papyrus/components/sysml</project.website>
-								<project.issues>${project.issueManagement.url}</project.issues>
-								<eclipse.target>${eclipse.targetrelease}</eclipse.target>
-								<update.site.nightly>https://ci.eclipse.org/papyrus/job/papyrus-sysml16-master/lastSuccessfulBuild/artifact/releng/org.eclipse.papyrus.sysml16.p2/target/repository/</update.site.nightly>
-							</symbols>
-							<associateSites>
-								<site>https://download.eclipse.org/modeling/mdt/papyrus/updates/releases/2021-12</site>
-							</associateSites>
-							<p2StatsUrl>http://download.eclipse.org/stats</p2StatsUrl>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
 </project>
