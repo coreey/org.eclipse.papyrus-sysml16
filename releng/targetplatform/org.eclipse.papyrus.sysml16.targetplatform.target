@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/eclipse-cbi/targetplatform-dsl -->
-<target name="SysML 1.6 - 2022-06" sequenceNumber="1655987714">
+<target name="SysML 1.6 - 2022-12" sequenceNumber="1671117310">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.platform.feature.group" version="0.0.0"/>
@@ -11,7 +11,7 @@
       <unit id="org.eclipse.equinox.executable.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.ocl.uml.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.xwt.feature.feature.group" version="0.0.0"/>
-      <repository id="eclipse-2022-06" location="http://download.eclipse.org/releases/2022-06/"/>
+      <repository id="eclipse-2022-12" location="http://download.eclipse.org/releases/2022-12/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.license.feature.group" version="0.0.0"/>
@@ -20,15 +20,15 @@
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.papyrus.junit.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.papyrus.sdk.feature.feature.group" version="0.0.0"/>
-      <repository id="Papyrus" location="https://download.eclipse.org/modeling/mdt/papyrus/updates/releases/2022-06"/>
+      <repository id="Papyrus" location="https://download.eclipse.org/modeling/mdt/papyrus/updates/releases/2022-12"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.justj.openjdk.hotspot.jre.full.feature.group" version="0.0.0"/>
       <repository id="JustJ-11" location="https://download.eclipse.org/justj/jres/11/updates/release"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.apache.xerces" version="2.9.0.v201101211617"/>
-      <repository id="orbit" location="https://download.eclipse.org/tools/orbit/downloads/drops/R20220302172233/repository/"/>
+      <unit id="org.apache.xerces" version="2.12.2.v20220131-0835"/>
+      <repository id="orbit" location="https://download.eclipse.org/tools/orbit/downloads/drops/R20221123021534/repository/"/>
     </location>
   </locations>
 </target>

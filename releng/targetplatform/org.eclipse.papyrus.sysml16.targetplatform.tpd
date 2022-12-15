@@ -1,25 +1,25 @@
-target "SysML 1.6 - 2022-06" with source requirements
+target "SysML 1.6 - 2022-12" with source requirements
 
 //manual update
-location "http://download.eclipse.org/releases/2022-06/" eclipse-2022-06 {
- org.eclipse.platform.feature.group lazy
- org.eclipse.rcp.feature.group lazy
- org.eclipse.jdt.feature.group lazy
- org.eclipse.equinox.p2.discovery.feature.feature.group lazy
- org.eclipse.equinox.executable.feature.group lazy
- org.eclipse.ocl.uml.feature.group lazy
- org.eclipse.xwt.feature.feature.group lazy
+location "http://download.eclipse.org/releases/2022-12/" eclipse-2022-12 {
+	 org.eclipse.platform.feature.group lazy
+	 org.eclipse.rcp.feature.group lazy
+	 org.eclipse.jdt.feature.group lazy
+	 org.eclipse.equinox.p2.discovery.feature.feature.group lazy
+	 org.eclipse.equinox.executable.feature.group lazy
+	 org.eclipse.ocl.uml.feature.group lazy
+	 org.eclipse.xwt.feature.feature.group lazy
 }
 
 //manual update
 location "https://download.eclipse.org/cbi/updates/license/" license-feature{
- org.eclipse.license.feature.group lazy
+ 	org.eclipse.license.feature.group lazy
 }
 
 //manual update
-location "https://download.eclipse.org/modeling/mdt/papyrus/updates/releases/2022-06" Papyrus {
- org.eclipse.papyrus.junit.feature.feature.group lazy
- org.eclipse.papyrus.sdk.feature.feature.group lazy
+location "https://download.eclipse.org/modeling/mdt/papyrus/updates/releases/2022-12" Papyrus {
+	 org.eclipse.papyrus.junit.feature.feature.group lazy
+	 org.eclipse.papyrus.sdk.feature.feature.group lazy
 }
 
 //manual update
@@ -28,6 +28,6 @@ location "https://download.eclipse.org/justj/jres/11/updates/release" JustJ-11 {
 }
 
 //manual update
-location "https://download.eclipse.org/tools/orbit/downloads/drops/R20220302172233/repository/" orbit {
- org.apache.xerces [2.9.0, 2.10.0)
+location "https://download.eclipse.org/tools/orbit/downloads/drops/R20221123021534/repository/" orbit {
+ 	org.apache.xerces [2.12.0, 2.13.0)
 }
