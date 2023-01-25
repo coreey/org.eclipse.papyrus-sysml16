@@ -214,19 +214,19 @@ InternalBlockDiagram Compartment{
 
 
 
-Port[appliedStereotypes~="FlowPort"][isAtomic=true][direction=in] {
+Port[portDirection=in] {
 	svgFile: "platform:/plugin/org.eclipse.papyrus.sysml16.diagram.common/resources/icons/FlowPort_IN/position.svg";
 }
 
-Port[appliedStereotypes~="FlowPort"][isAtomic=true][direction=out] {
+Port[portDirection=out] {
 	svgFile: "platform:/plugin/org.eclipse.papyrus.sysml16.diagram.common/resources/icons/FlowPort_OUT/position.svg";
 }
 
-Port[appliedStereotypes~="FlowPort"][isAtomic=true][direction=inout] {
+Port[portDirection=inout] {
 	svgFile: "platform:/plugin/org.eclipse.papyrus.sysml16.diagram.common/resources/icons/FlowPort_INOUT/position.svg";
 }
 
-Port[appliedStereotypes~="FlowPort"][isAtomic=false] {
+Port[portDirection=portDirNA] {
 	svgFile: "platform:/plugin/org.eclipse.papyrus.sysml16.diagram.common/resources/icons/FlowPort_NA/position.svg";
 }
 

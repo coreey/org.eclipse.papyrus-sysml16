@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Copyright (c) 2019 CEA LIST, and others.
+ * Copyright (c) 2019, 2023 CEA LIST, and others.
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License 2.0
@@ -10,11 +10,11 @@
  *
  * Contributors:
  *   Nicolas FAUVERGUE (CEA LIST) nicolas.fauvergue@cea.fr - Initial API and implementation
+ *   Ansgar Radermacher (CEA LIST) ansgar.radermacher@cea.fr - Bug 581382, calculate port direction
  *
  *****************************************************************************/
 
 package org.eclipse.papyrus.sysml16.diagram.common.css.dom;
-
 
 
 import java.util.LinkedList;
@@ -32,21 +32,31 @@ import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.papyrus.infra.gmfdiag.css.dom.GMFElementAdapter;
 import org.eclipse.papyrus.infra.gmfdiag.css.engine.ExtendedCSSEngine;
 import org.eclipse.papyrus.infra.tools.util.ListHelper;
+import org.eclipse.papyrus.sysml16.deprecatedelements.FlowPort;
+import org.eclipse.papyrus.sysml16.deprecatedelements.FlowSpecification;
 import org.eclipse.papyrus.sysml16.diagram.common.css.helper.CSSDOMSYSMLSemanticElementHelper;
+import org.eclipse.papyrus.sysml16.portsandflows.FlowDirectionKind;
+import org.eclipse.papyrus.sysml16.portsandflows.FlowProperty;
+import org.eclipse.papyrus.sysml16.portsandflows.FullPort;
+import org.eclipse.papyrus.sysml16.portsandflows.ProxyPort;
 import org.eclipse.papyrus.sysml16.service.types.util.SysMLServiceTypeUtil;
 import org.eclipse.papyrus.sysml16.util.DeprecatedElementUtil;
 import org.eclipse.papyrus.uml.diagram.common.stereotype.display.helper.StereotypeDisplayConstant;
 import org.eclipse.papyrus.uml.diagram.common.stereotype.display.helper.StereotypeDisplayUtil;
 import org.eclipse.uml2.uml.AcceptEventAction;
+import org.eclipse.uml2.uml.Class;
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.Event;
+import org.eclipse.uml2.uml.Interface;
 import org.eclipse.uml2.uml.NamedElement;
+import org.eclipse.uml2.uml.Port;
 import org.eclipse.uml2.uml.Property;
 import org.eclipse.uml2.uml.Stereotype;
 import org.eclipse.uml2.uml.TimeEvent;
 import org.eclipse.uml2.uml.Trigger;
 import org.eclipse.uml2.uml.Type;
 import org.eclipse.uml2.uml.TypedElement;
+import org.eclipse.uml2.uml.util.UMLUtil;
 
 /**
  * DOM Element Adapter for SYSML Elements
@@ -90,6 +100,12 @@ public class GMFSYSMLElementAdapter extends GMFElementAdapter {
 
 	/** The Constant IS_FRAMEZABLE. */
 	public static final String IS_FRAME = "isFrame"; //$NON-NLS-1$
+
+	/** Calculate the port direction. */
+	public static final String PORT_DIRECTION = "portDirection"; //$NON-NLS-1$
+
+	/** A SysML port, but direction cannot be calculated (not available) */
+	public static final String PORT_DIR_NA = "portDirNA"; //$NON-NLS-1$
 
 	/**
 	 * The CSS Separator for qualifiers, when we must use CSS ID
@@ -159,23 +175,29 @@ public class GMFSYSMLElementAdapter extends GMFElementAdapter {
 			// manage of isConstraint=true attribute for Property
 			if (IS_CONSTRAINT.equals(attr) && isProperty) {
 				IElementMatcher constraint = ((ISpecializationType) ElementTypeRegistry.getInstance().getType(SysMLServiceTypeUtil.ORG_ECLIPSE_PAPYRUS_SYSML16_CONSTRAINTPROPERTY)).getMatcher();
-				return String.valueOf(constraint.matches((Property) semanticElement));
+				return String.valueOf(constraint.matches(semanticElement));
 			}
 			// manage of isPart=true attribute for Property
 			if (IS_PART.equals(attr) && isProperty) {
 				IElementMatcher part = ((ISpecializationType) ElementTypeRegistry.getInstance().getType(SysMLServiceTypeUtil.ORG_ECLIPSE_PAPYRUS_SYSML16_PART)).getMatcher();
-				return String.valueOf(part.matches((Property) semanticElement));
+				return String.valueOf(part.matches(semanticElement));
 			}
 			// manage of isReference=true attribute for Property
 			if (IS_REFERENCE.equals(attr) && isProperty) {
 				IElementMatcher reference = ((ISpecializationType) ElementTypeRegistry.getInstance().getType(SysMLServiceTypeUtil.ORG_ECLIPSE_PAPYRUS_SYSML16_REFERENCE)).getMatcher();
-				return String.valueOf(reference.matches((Property) semanticElement));
+				return String.valueOf(reference.matches(semanticElement));
+			}
+			if (PORT_DIRECTION.equals(attr) && semanticElement instanceof Port) {
+				// calculate port direction, bug 581382
+				String portDir = getPortDirection((Port) semanticElement);
+				if (portDir != null) {
+					return portDir;
+				}
 			}
 
-
-			// Get applied STereotypes Attributes
+			// Get applied Stereotypes attributes
 			if (APPLIED_STEREOTYPES_PROPERTY.equals(attr)) {
-				List<String> appliedStereotypes = new LinkedList<String>();
+				List<String> appliedStereotypes = new LinkedList<>();
 				for (Stereotype stereotype : currentElement.getAppliedStereotypes()) {
 					appliedStereotypes.add(stereotype.getName());
 					appliedStereotypes.add(stereotype.getQualifiedName());
@@ -206,7 +228,7 @@ public class GMFSYSMLElementAdapter extends GMFElementAdapter {
 				if (feature != null) {
 					if (feature.isMany()) {
 						List<?> values = (List<?>) stereotypeApplication.eGet(feature);
-						List<String> cssValues = new LinkedList<String>();
+						List<String> cssValues = new LinkedList<>();
 						for (Object value : values) {
 							cssValues.add(getCSSValue(feature, value));
 						}
@@ -364,4 +386,73 @@ public class GMFSYSMLElementAdapter extends GMFElementAdapter {
 		return hasTimeEvent && !hasOthersTriggers;
 	}
 
+	/**
+	 * Calculate the direction of a port
+	 *
+	 * @param port
+	 *            the UML port
+	 * @return
+	 */
+	protected String getPortDirection(Port port) {
+		FlowPort flowPort = UMLUtil.getStereotypeApplication(port, FlowPort.class);
+		Type type = port.getType();
+		if (flowPort != null) {
+			if (flowPort.isAtomic()) {
+				return flowPort.getDirection().getLiteral();
+			} else if (type instanceof Interface) {
+				// port typed by an interface = flow-specification
+				FlowSpecification flowSpec = UMLUtil.getStereotypeApplication(port, FlowSpecification.class);
+				if (flowSpec != null) {
+					FlowDirectionKind fd = getDirectionFromFlowProperties(flowSpec.getFlowProperties());
+					if (fd != null) {
+						return fd.getLiteral();
+					}
+				}
+			}
+			return PORT_DIR_NA;
+		}
+		FullPort fullPort = UMLUtil.getStereotypeApplication(port, FullPort.class);
+		ProxyPort proxyPort = UMLUtil.getStereotypeApplication(port, ProxyPort.class);
+		if (fullPort != null || proxyPort != null) {
+			if (type instanceof Class) {
+				// full port or proxy ports may be typed with classes or blocks that in turn
+				// own flowProperties
+				Class clazz = (Class) type;
+				FlowDirectionKind fd = getDirectionFromFlowProperties(clazz.allAttributes());
+				if (fd != null) {
+					return fd.getLiteral();
+				}
+			}
+			return PORT_DIR_NA;
+		}
+		return null;
+	}
+
+	/**
+	 * Calculate a direction from a list of properties that eventually apply
+	 * the stereotype FlowProperty
+	 *
+	 * @param propertyList
+	 *            a list of properties
+	 * @return the flow direction
+	 */
+	protected FlowDirectionKind getDirectionFromFlowProperties(List<Property> propertyList) {
+		FlowDirectionKind fd = null;
+		for (Property flowProperty : propertyList) {
+			FlowProperty fp = UMLUtil.getStereotypeApplication(flowProperty, FlowProperty.class);
+			if (fp != null) {
+				if (fd == null) {
+					fd = fp.getDirection();
+				} else if (fd != FlowDirectionKind.INOUT) {
+					// if the flow direction is not INOUT (i.e. either IN or OUT), the direction
+					// of the flow property must be the same, otherwise change to inout
+					if (fd != fp.getDirection()) {
+						fd = FlowDirectionKind.INOUT;
+					}
+				}
+				// else - already inout, cannot be changed by further flow properties
+			}
+		}
+		return fd;
+	}
 }
